@@ -1,0 +1,91 @@
+diff --git a/node_modules/react-navigation/src/views/SafeAreaView.js b/node_modules/react-navigation/src/views/SafeAreaView.js
+index e8514b1..211ac76 100644
+--- a/node_modules/react-navigation/src/views/SafeAreaView.js
++++ b/node_modules/react-navigation/src/views/SafeAreaView.js
+@@ -149,37 +149,37 @@ class SafeView extends Component {
+     const WIDTH = isLandscape ? X_HEIGHT : X_WIDTH;
+     const HEIGHT = isLandscape ? X_WIDTH : X_HEIGHT;
+ 
+-    this.view._component.measureInWindow((winX, winY, winWidth, winHeight) => {
+-      let realY = winY;
+-      let realX = winX;
+-
+-      if (realY >= HEIGHT) {
+-        realY = realY % HEIGHT;
+-      } else if (realY < 0) {
+-        realY = realY % HEIGHT + HEIGHT;
+-      }
+-
+-      if (realX >= WIDTH) {
+-        realX = realX % WIDTH;
+-      } else if (realX < 0) {
+-        realX = realX % WIDTH + WIDTH;
+-      }
+-
+-      const touchesTop = realY === 0;
+-      const touchesBottom = realY + winHeight >= HEIGHT;
+-      const touchesLeft = realX === 0;
+-      const touchesRight = realX + winWidth >= WIDTH;
+-
+-      this.setState({
+-        touchesTop,
+-        touchesBottom,
+-        touchesLeft,
+-        touchesRight,
+-        orientation: newOrientation,
+-        viewWidth: winWidth,
+-        viewHeight: winHeight,
+-      });
+-    });
++    // this.view._component.measureInWindow((winX, winY, winWidth, winHeight) => {
++    //   let realY = winY;
++    //   let realX = winX;
++
++    //   if (realY >= HEIGHT) {
++    //     realY = realY % HEIGHT;
++    //   } else if (realY < 0) {
++    //     realY = realY % HEIGHT + HEIGHT;
++    //   }
++
++    //   if (realX >= WIDTH) {
++    //     realX = realX % WIDTH;
++    //   } else if (realX < 0) {
++    //     realX = realX % WIDTH + WIDTH;
++    //   }
++
++    //   const touchesTop = realY === 0;
++    //   const touchesBottom = realY + winHeight >= HEIGHT;
++    //   const touchesLeft = realX === 0;
++    //   const touchesRight = realX + winWidth >= WIDTH;
++
++    //   this.setState({
++    //     touchesTop,
++    //     touchesBottom,
++    //     touchesLeft,
++    //     touchesRight,
++    //     orientation: newOrientation,
++    //     viewWidth: winWidth,
++    //     viewHeight: winHeight,
++    //   });
++    // });
+   };
+ 
+   _getSafeAreaStyle = () => {
+diff --git a/node_modules/react-navigation/src/views/withOrientation.js b/node_modules/react-navigation/src/views/withOrientation.js
+index d1f4c1a..7532f46 100644
+--- a/node_modules/react-navigation/src/views/withOrientation.js
++++ b/node_modules/react-navigation/src/views/withOrientation.js
+@@ -34,11 +34,11 @@ export default function<T: {}>(
+     }
+ 
+     componentDidMount() {
+-      Dimensions.addEventListener('change', this.handleOrientationChange);
++      // Dimensions.addEventListener('change', this.handleOrientationChange);
+     }
+ 
+     componentWillUnmount() {
+-      Dimensions.removeEventListener('change', this.handleOrientationChange);
++      // Dimensions.removeEventListener('change', this.handleOrientationChange);
+     }
+ 
+     handleOrientationChange = ({ window }: { window: WindowDimensions }) => {

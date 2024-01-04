@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "513965581040",
+    "firebase_url": "https://anatili-194921.firebaseio.com",
+    "project_id": "anatili-194921",
+    "storage_bucket": "anatili-194921.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:513965581040:android:54fa8c659bf0902a",
+        "android_client_info": {
+          "package_name": "com.anatili"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "513965581040-lbtl2dmo390tnkqmij6iju4umnt4uu1c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHaETXd6YhbQ3XxQUJUi_eBlZkr6bkvek"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
